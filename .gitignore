@@ -29,6 +29,10 @@ sim/*.fst
 sim/*.vcd
 sim/*.wlf
 sim/*.log
+sim/**/*.vvp
+sim/**/*.log
+sim/**/*.fst
+sim/**/*.vcd
 
 # Local tools and operating-system files
 .vscode/
@@ -37,4 +41,3 @@ sim/*.log
 *.swp
 Thumbs.db
 Desktop.ini
-

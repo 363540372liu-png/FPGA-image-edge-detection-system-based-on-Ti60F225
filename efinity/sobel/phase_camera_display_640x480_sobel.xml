@@ -1,0 +1,79 @@
+<efx:project xmlns:efx="http://www.efinixinc.com/enf_proj" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="phase_camera_display_640x480_sobel" description="Full-resolution grayscale, two-line 3x3 Sobel, 2x2 OR preview, accepted landscape HDMI mapping" sw_version="2026.1.132" config_result_in_sync="true" design_ood="change" place_ood="change" route_ood="change" xsi:schemaLocation="http://www.efinixinc.com/enf_proj enf_proj.xsd">
+  <efx:device_info><efx:family name="Titanium" /><efx:device name="Ti60F225" /><efx:timing_model name="C4" /></efx:device_info>
+  <efx:design_info def_veri_version="verilog_2k" def_vhdl_version="vhdl_2008" unified_flow="false">
+    <efx:top_module name="phase_camera_display_official_waveshare" />
+    <efx:design_file name="../../rtl/sobel/reset_sync.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/reset_release_sync.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/snapshot_cdc.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/camera_power_seq.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/sccb_master.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/vendor/I2C_OV5640_RGB565_Config_Official.v" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/I2C_OV5640_640480_Config.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/ov5640_init_controller.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/dvp_rgb565_capture.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/camera_frame_monitor.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/camera_frontend.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/rgb565_to_gray8.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/line_delay_ram8.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/gray_window_3x3.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/sobel_threshold.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/edge_full_frame_stream.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/edge_preview_2x2_or.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/frame_ram20.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/packed_pingpong_framebuffer.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/video_timing_gen.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/clean_preview_output.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/display_diagnostic_overlay.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/tmds_encoder.sv" version="default" library="default" />
+    <efx:design_file name="../../rtl/sobel/phase_camera_display_official_waveshare.sv" version="default" library="default" />
+    <efx:top_vhdl_arch name="" />
+  </efx:design_info>
+  <efx:constraint_info><efx:sdc_file name="../../efinity/sobel/phase_camera_display_640x480_sobel.sdc" /><efx:inter_file name="" /></efx:constraint_info>
+  <efx:sim_info /><efx:misc_info /><efx:ooc_info /><efx:ip_info />
+  <efx:synthesis tool_name="efx_map">
+    <efx:param name="work_dir" value="work_syn" value_type="e_string" />
+    <efx:param name="write_efx_verilog" value="on" value_type="e_bool" />
+    <efx:param name="mode" value="speed" value_type="e_option" />
+    <efx:param name="max_ram" value="-1" value_type="e_integer" />
+    <efx:param name="max_mult" value="-1" value_type="e_integer" />
+    <efx:param name="max-bit-blast-mem-size" value="10240" value_type="e_integer" />
+    <efx:param name="bram_output_regs_packing" value="1" value_type="e_option" />
+    <efx:param name="infer-clk-enable" value="3" value_type="e_option" />
+    <efx:param name="infer-sync-set-reset" value="1" value_type="e_option" />
+    <efx:param name="fanout-limit" value="0" value_type="e_integer" />
+    <efx:param name="retiming" value="1" value_type="e_option" />
+    <efx:param name="seq_opt" value="1" value_type="e_option" />
+    <efx:param name="blackbox-error" value="1" value_type="e_option" />
+    <efx:param name="hdl-compile-unit" value="1" value_type="e_option" />
+    <efx:param name="suppress_info_msgs" value="off" value_type="e_bool" />
+    <efx:param name="suppress_warning_msgs" value="off" value_type="e_bool" />
+  </efx:synthesis>
+  <efx:place_and_route tool_name="efx_pnr">
+    <efx:param name="work_dir" value="work_pnr" value_type="e_string" />
+    <efx:param name="verbose" value="off" value_type="e_bool" />
+    <efx:param name="seed" value="1" value_type="e_integer" />
+    <efx:param name="placer_effort_level" value="2" value_type="e_option" />
+    <efx:param name="max_threads" value="-1" value_type="e_integer" />
+    <efx:param name="print_critical_path" value="10" value_type="e_integer" />
+    <efx:param name="beneficial_skew" value="on" value_type="e_option" />
+    <efx:param name="suppress_info_msgs" value="off" value_type="e_bool" />
+    <efx:param name="suppress_warning_msgs" value="off" value_type="e_bool" />
+  </efx:place_and_route>
+  <efx:bitstream_generation tool_name="efx_pgm">
+    <efx:param name="mode" value="active" value_type="e_option" />
+    <efx:param name="width" value="1" value_type="e_option" />
+    <efx:param name="enable_roms" value="smart" value_type="e_option" />
+    <efx:param name="spi_low_power_mode" value="on" value_type="e_bool" />
+    <efx:param name="io_weak_pullup" value="on" value_type="e_bool" />
+    <efx:param name="oscillator_clock_divider" value="DIV8" value_type="e_option" />
+    <efx:param name="enable_crc_check" value="on" value_type="e_bool" />
+    <efx:param name="active_capture_clk_edge" value="posedge" value_type="e_option" />
+    <efx:param name="release_tri_then_reset" value="on" value_type="e_bool" />
+    <efx:param name="bitstream_compression" value="on" value_type="e_bool" />
+    <efx:param name="jtag_usercode" value="0xFFFFFFFF" value_type="e_string" />
+    <efx:param name="enable_external_master_clock" value="off" value_type="e_bool" />
+    <efx:param name="generate_bit" value="on" value_type="e_bool" />
+    <efx:param name="generate_hex" value="on" value_type="e_bool" />
+  </efx:bitstream_generation>
+  <efx:debugger><efx:param name="work_dir" value="work_dbg" value_type="e_string" /><efx:param name="auto_instantiation" value="off" value_type="e_bool" /><efx:param name="profile" value="NONE" value_type="e_string" /></efx:debugger>
+</efx:project>

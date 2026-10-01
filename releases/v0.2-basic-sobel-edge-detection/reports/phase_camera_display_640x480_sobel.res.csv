@@ -1,0 +1,42 @@
+sep=\t
+Module Resource Usage Distribution Estimates
+Generated at: Oct 01, 2026 23:37:38
+
+Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module	        FFs	      SRLs	      ADDs	       LUTs	    COMB4s	      RAMs	 DSP/MULTs
+phase_camera_display_official_waveshare:phase_camera_display_official_waveshare	  1829(11)	     0(0)	   836(0)	  6688(13)	     0(0)	   242(0)	     0(0)	
+ +u_camera:camera_frontend                                  	    346(0)	     0(0)	   204(0)	    904(1)	     0(0)	     0(0)	     0(0)	
+  +u_sys_reset_sync:reset_sync                              	      3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+  +u_power_seq:camera_power_seq(CLK_HZ=32'b0101101110001101100000000000)	    24(24)	     0(0)	   21(21)	    14(14)	     0(0)	     0(0)	     0(0)	
+  +u_init_rom:I2C_OV5640_640480_Config                      	      0(0)	     0(0)	     0(0)	   267(62)	     0(0)	     0(0)	     0(0)	
+   +u_official_table:I2C_OV5640_RGB565_Config_Official      	      0(0)	     0(0)	     0(0)	  205(205)	     0(0)	     0(0)	     0(0)	
+  +u_init_controller:ov5640_init_controller(CLK_HZ=32'b0101101110001101100000000000,INIT_COUNT=32'b0100111000)	    76(76)	     0(0)	     0(0)	  360(360)	     0(0)	     0(0)	     0(0)	
+  +u_sccb_master:sccb_master(CLK_HZ=32'b0101101110001101100000000000,SCL_HZ=32'b011000011010100000)	    65(65)	     0(0)	     7(7)	  129(129)	     0(0)	     0(0)	     0(0)	
+  +u_pclk_reset_sync:reset_sync                             	      3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+  +u_dvp_capture:dvp_rgb565_capture(ACTIVE_WIDTH=32'b01010000000,ACTIVE_HEIGHT=32'b0111100000)	    73(73)	     0(0)	   17(17)	    37(37)	     0(0)	     0(0)	     0(0)	
+  +u_frame_monitor:camera_frame_monitor(ACTIVE_WIDTH=32'b01010000000,ACTIVE_HEIGHT=32'b0111100000)	  102(102)	     0(0)	 159(159)	    96(96)	     0(0)	     0(0)	     0(0)	
+ +u_rgb565_to_gray8:rgb565_to_gray8                         	    97(97)	     0(0)	 132(132)	    10(10)	     0(0)	     0(0)	     0(0)	
+ +u_gray_window_3x3:gray_window_3x3                         	  241(206)	     0(0)	   57(21)	    96(61)	     0(0)	     2(0)	     0(0)	
+  +u_line_y_minus_1:line_delay_ram8                         	    15(15)	     0(0)	   18(18)	    15(15)	     0(0)	     1(1)	     0(0)	
+  +u_line_y_minus_2:line_delay_ram8(DELAY_PIXELS=639)       	    20(20)	     0(0)	   18(18)	    20(20)	     0(0)	     1(1)	     0(0)	
+ +u_sobel_threshold:sobel_threshold                         	    66(66)	     0(0)	 118(118)	    39(39)	     0(0)	     0(0)	     0(0)	
+ +u_edge_full_frame:edge_full_frame_stream                  	  386(386)	     0(0)	     6(6)	  366(366)	     0(0)	     0(0)	     0(0)	
+ +u_edge_preview_2x2_or:edge_preview_2x2_or                 	  347(347)	     0(0)	   17(17)	  646(646)	     0(0)	     0(0)	     0(0)	
+ +u_pixel_reset:reset_release_sync                          	      3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+ +u_fast_reset:reset_release_sync                           	      3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+ +u_feedback_reset:reset_release_sync                       	      3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+ +u_timing:video_timing_gen(H_ACTIVE=640,H_FP=16,H_SYNC=96,H_BP=48,V_ACTIVE=480,V_FP=10,V_SYNC=2,V_BP=33)	    24(24)	     0(0)	   22(22)	    28(28)	     0(0)	     0(0)	     0(0)	
+ +u_framebuffer:packed_pingpong_framebuffer(SOURCE_WIDTH=320,SOURCE_HEIGHT=240,SAMPLE_X_STEP=1,SAMPLE_Y_STEP=1,DISPLAY_SCALE=2,ROTATE_CCW_FOR_CW_PANEL=1'b1)	  199(194)	     0(0)	 203(203)	  317(213)	     0(0)	   240(0)	     0(0)	
+  +u_f0_l0:frame_ram20                                      	      4(4)	     0(0)	     0(0)	    71(71)	     0(0)	   30(30)	     0(0)	
+  +u_f0_l1:frame_ram20                                      	      0(0)	     0(0)	     0(0)	      0(0)	     0(0)	   30(30)	     0(0)	
+  +u_f0_l2:frame_ram20                                      	      0(0)	     0(0)	     0(0)	      0(0)	     0(0)	   30(30)	     0(0)	
+  +u_f0_l3:frame_ram20                                      	      0(0)	     0(0)	     0(0)	      0(0)	     0(0)	   30(30)	     0(0)	
+  +u_f1_l0:frame_ram20                                      	      1(1)	     0(0)	     0(0)	    33(33)	     0(0)	   30(30)	     0(0)	
+  +u_f1_l1:frame_ram20                                      	      0(0)	     0(0)	     0(0)	      0(0)	     0(0)	   30(30)	     0(0)	
+  +u_f1_l2:frame_ram20                                      	      0(0)	     0(0)	     0(0)	      0(0)	     0(0)	   30(30)	     0(0)	
+  +u_f1_l3:frame_ram20                                      	      0(0)	     0(0)	     0(0)	      0(0)	     0(0)	   30(30)	     0(0)	
+ +u_frame_diag_cdc:snapshot_cdc(WIDTH=136)                  	    28(28)	     0(0)	     0(0)	      1(1)	     0(0)	     0(0)	     0(0)	
+ +u_tmds_blue:tmds_encoder                                  	    19(19)	     0(0)	   24(24)	1319(1319)	     0(0)	     0(0)	     0(0)	
+ +u_tmds_green:tmds_encoder                                 	    32(32)	     0(0)	   29(29)	1618(1618)	     0(0)	     0(0)	     0(0)	
+ +u_tmds_red:tmds_encoder                                   	    24(24)	     0(0)	   24(24)	1331(1331)	     0(0)	     0(0)	     0(0)	

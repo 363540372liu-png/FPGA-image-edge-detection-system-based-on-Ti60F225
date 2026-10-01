@@ -27,11 +27,11 @@ OV5640 Camera -> RGB -> Grayscale -> 3x3 Window / Line Buffer
 | OV5640 camera input | PASS |
 | Display output | PASS |
 | Camera-to-display passthrough | PASS |
-| RGB to grayscale | Planned |
-| 3x3 line buffer | Planned |
-| Sobel edge detection | Planned |
-| Threshold | Planned |
-| Complete edge detection pipeline | Planned |
+| RGB to grayscale | PASS (v0.2 offline) |
+| 3x3 line buffer | PASS (v0.2 offline) |
+| Sobel edge detection | PASS (v0.2 offline) |
+| Threshold | PASS (strict `abs(Gx)+abs(Gy)>128`) |
+| Complete edge detection pipeline | PASS offline; physical test pending |
 
 ## Current Baseline
 
@@ -77,5 +77,16 @@ Future algorithm work must start from a copy of this frozen baseline and must no
 
 The baseline RTL passed the recorded simulation regressions and the Efinity 2026.1 synthesis, interface generation, place-and-route, timing, and bitstream-generation flow. The recorded user hardware test passed camera-to-display output on the real Ti60F225 board. See [the baseline record](docs/baseline-camera-display-passthrough.md) for scope, limitations, clocks, resources, and rebuild notes.
 
-This release does not claim grayscale, line-buffer, Sobel, threshold, or complete edge-detection hardware functionality.
+## Latest Milestone
 
+`v0.2-basic-sobel-edge-detection` adds the independently verified 640x480
+camera-to-display Sobel milestone. It preserves the v0.1 release and uses a
+two-line 3x3 window, signed Sobel arithmetic, strict threshold 128, full-frame
+border-aware scheduling, and 2x2 OR reduction to the accepted 320x240 display
+buffer. See [the v0.2 acceptance report](releases/v0.2-basic-sobel-edge-detection/offline-acceptance-report.md)
+for the exact verification scope and known limits.
+
+The delivered bitstream SHA-256 is
+`6952E2A1DE00E472C017B02AFB04F0B06C498531CBA2D065C5060783B9271DE9`.
+Offline Efinity implementation is complete; physical JTAG download and
+camera/display confirmation are still user actions.
