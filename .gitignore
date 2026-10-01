@@ -1,0 +1,40 @@
+# Efinity generated build data
+rtl/rtl/
+outflow/
+work_syn/
+work_pnr/
+work_dbg/
+*.rdb
+*.vdb
+*.netlist
+*.gplace
+*.primplace
+*.io_place
+*.lbf
+*.clstdb
+*.htree
+*.troutingtraces
+*.route.out
+*.place.out
+*.map.out
+*.pgm.out
+*.err.log
+*.info.log
+*.warn.log
+*.log
+
+# Simulation products
+sim/*.vvp
+sim/*.fst
+sim/*.vcd
+sim/*.wlf
+sim/*.log
+
+# Local tools and operating-system files
+.vscode/
+.idea/
+*.user
+*.swp
+Thumbs.db
+Desktop.ini
+
