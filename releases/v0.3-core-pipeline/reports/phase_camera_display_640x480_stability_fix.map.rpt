@@ -1,0 +1,745 @@
+Efinity Synthesis report for project phase_camera_display_640x480_stability_fix
+Version: 2026.1.132
+Generated at: Oct 02, 2026 21:20:21
+Copyright (C) 2013 - 2026  All rights reserved.
+
+Top-level Entity Name : phase_camera_display_official_waveshare
+
+family : Titanium
+device : Ti60F225
+project : phase_camera_display_640x480_stability_fix
+root : phase_camera_display_official_waveshare
+binary-db : outflow\phase_camera_display_640x480_stability_fix.vdb
+insert-ios : 0
+insert-gclk : 0
+max-carry-cascade : 320
+max-dsp-cascade : 16
+max_mult : -1
+max_ram : -1
+mode : speed
+num_srl : -1
+output-dir : outflow
+proj_curr_path : E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix
+project : phase_camera_display_640x480_stability_fix
+project-xml : E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\phase_camera_display_640x480_stability_fix.xml
+retiming : 1
+root : phase_camera_display_official_waveshare
+work-dir : work_syn
+write-efx-verilog : outflow\phase_camera_display_640x480_stability_fix.map.v
+
+File List:
+
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\reset_sync.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\reset_release_sync.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\snapshot_cdc.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\frame_event_counters.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\camera_power_seq.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\sccb_master.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\vendor\I2C_OV5640_RGB565_Config_Official.v
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\I2C_OV5640_640480_Config.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\ov5640_init_controller.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\dvp_rgb565_capture.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\camera_frame_monitor.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\camera_frontend.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\rgb565_to_gray8.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\line_delay_ram8.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\gray_window_3x3.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\sobel_threshold.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\edge_full_frame_stream.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\edge_preview_2x2_or.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\gray_preview_2x2_mean.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\preview_pair_aligner.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\frame_ram20.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\split_triple_framebuffer.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\video_timing_gen.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\split_preview_output.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\display_diagnostic_overlay.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\frame_counter_overlay.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\button_sync_debounce.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\threshold_control.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\threshold_overlay.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\tmds_encoder.sv
+E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\phase_camera_display_official_waveshare.sv
+
+### ### Report Section Start ### ###
+
+"MEM|SYN-0677" : ... Memory 'fifo_mem' is not initialized, assuming empty initial contents. (E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\edge_full_frame_stream.sv:47)
+"MEM|SYN-0677" : ... Memory 'row_pair' is not initialized, assuming empty initial contents. (E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\edge_preview_2x2_or.sv:31)
+"MEM|SYN-0657" : Mapping into logic memory block 'u_edge_full_frame/fifo_mem' (320 bits) (E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\edge_full_frame_stream.sv:47) because read port is not synchronous.
+"MEM|SYN-0657" : Mapping into logic memory block 'u_edge_preview_2x2_or/row_pair' (320 bits) (E:\codex\fgpa\Efinity test\phase_camera_display_640x480_stability_fix\rtl\edge_preview_2x2_or.sv:31) because read port is not synchronous.
+
+### ### EFX_FF CE enables (begin) ### ### ###
+
+Total number of enable signals: 446
+Total number of FFs with enable signals: 2576
++---------------------------------------+------------------+
+|CE Signal                              |Number of FF loads|
++---------------------------------------+------------------+
+|u_stability_count_cdc/n7               |              194 |
+|u_frame_event_counters/snapshot_pending|              193 |
+|display_frame_tick                     |              193 |
+|u_gray_window_3x3/n1163                |               83 |
+|u_sobel_threshold/n786                 |               51 |
+|ceg_net147                             |               48 |
+|u_gray_window_3x3/n1151                |               43 |
+|u_gray_window_3x3/accept_pixel         |               42 |
+|camera_frame_end                       |               37 |
+|u_framebuffer/n1371                    |               36 |
+|~u_camera/u_dvp_capture/n495           |               35 |
+|u_framebuffer/n2144                    |               35 |
+|u_framebuffer/n2132                    |               34 |
+|ceg_net4                               |               32 |
+|u_framebuffer/n2150                    |               32 |
+|u_frame_event_counters/n1333           |               32 |
+|frame_good_pclk                        |               32 |
+|camera_start_of_frame                  |               32 |
+|ceg_net18                              |               32 |
+|paired_end                             |               32 |
+|u_preview_pair_aligner/do_read         |               30 |
+|u_gray_preview_2x2_mean/bottom_read    |               28 |
+|ceg_net179                             |               27 |
+|u_preview_pair_aligner/read_pending    |               26 |
+|u_gray_preview_2x2_mean/bottom_pending |               25 |
+|~ceg_net395                            |               25 |
+|u_camera/u_sccb_master/n481            |               24 |
+|u_camera/u_power_seq/n7                |               22 |
+|ceg_net182                             |               21 |
+|ceg_net326                             |               21 |
+|i109/n40                               |               20 |
+|i109/n39                               |               20 |
+|i109/n38                               |               20 |
+|u_edge_full_frame/n1241                |               20 |
+|i109/n37                               |               20 |
+|u_gray_window_3x3/valid_s1             |               20 |
+|i109/n25                               |               20 |
+|i109/n26                               |               20 |
+|i109/n27                               |               20 |
+|i109/n28                               |               20 |
+|i109/n36                               |               20 |
+|i109/n35                               |               20 |
+|i109/n34                               |               20 |
+|i109/n33                               |               20 |
+|i109/n32                               |               20 |
+|i109/n31                               |               20 |
+|i109/n30                               |               20 |
+|i109/n29                               |               20 |
+|u_sobel_threshold/n796                 |               20 |
+|ceg_net152                             |               19 |
+|~u_edge_preview_2x2_or/n479            |               18 |
+|u_timing/equal_6/n23                   |               17 |
+|ceg_net5                               |               16 |
+|~u_camera/u_frame_monitor/n1641        |               16 |
+|ceg_net14                              |               16 |
+|ceg_net384                             |               11 |
+|ceg_net241                             |               10 |
+|u_frame_diag_cdc/n7                    |               10 |
+|ceg_net122                             |               10 |
+|ceg_net247                             |               10 |
+|gray_preview_valid                     |               10 |
+|ceg_net227                             |                9 |
+|ceg_net231                             |                9 |
+|ceg_net125                             |                9 |
+|ceg_net243                             |                9 |
+|u_framebuffer/n4009                    |                9 |
+|ceg_net249                             |                9 |
+|ceg_net353                             |                9 |
+|u_camera/u_dvp_capture/n485            |                8 |
+|u_gray_preview_2x2_mean/n573           |                8 |
+|u_camera/u_init_controller/n1891       |                8 |
+|u_camera/u_init_controller/n1741       |                8 |
+|u_threshold_to_pclk/n7                 |                8 |
+|gray_start_of_frame                    |                8 |
+|u_camera/u_init_controller/n1825       |                8 |
+|ceg_net356                             |                8 |
+|ceg_net233                             |                8 |
+|ceg_net229                             |                8 |
+|ceg_net398                             |                7 |
+|u_framebuffer/n1622                    |                7 |
+|ceg_net404                             |                4 |
+|ceg_net164                             |                4 |
+|ceg_net155                             |                4 |
+|ceg_net79                              |                2 |
+|paired_sof                             |                2 |
+|u_button_sync/n338                     |                2 |
+|u_button_sync/n7                       |                2 |
+|i110/n398                              |                1 |
+|i110/n399                              |                1 |
+|i110/n400                              |                1 |
+|i110/n380                              |                1 |
+|i110/n401                              |                1 |
+|i110/n402                              |                1 |
+|i110/n403                              |                1 |
+|i110/n395                              |                1 |
+|i110/n404                              |                1 |
+|i110/n379                              |                1 |
+|i110/n378                              |                1 |
+|i110/n411                              |                1 |
+|i110/n397                              |                1 |
+|i110/n396                              |                1 |
+|i110/n381                              |                1 |
+|i110/n394                              |                1 |
+|i110/n393                              |                1 |
+|i110/n392                              |                1 |
+|i110/n391                              |                1 |
+|i110/n390                              |                1 |
+|i110/n389                              |                1 |
+|i110/n388                              |                1 |
+|i110/n387                              |                1 |
+|i110/n386                              |                1 |
+|i110/n385                              |                1 |
+|i110/n384                              |                1 |
+|i110/n383                              |                1 |
+|i110/n382                              |                1 |
+|i110/n443                              |                1 |
+|i110/n431                              |                1 |
+|i110/n432                              |                1 |
+|i110/n433                              |                1 |
+|i110/n434                              |                1 |
+|i110/n435                              |                1 |
+|i110/n436                              |                1 |
+|i110/n437                              |                1 |
+|i110/n438                              |                1 |
+|i110/n439                              |                1 |
+|i110/n440                              |                1 |
+|i110/n441                              |                1 |
+|i110/n442                              |                1 |
+|i110/n430                              |                1 |
+|i110/n444                              |                1 |
+|i110/n452                              |                1 |
+|i110/n451                              |                1 |
+|i110/n450                              |                1 |
+|i110/n449                              |                1 |
+|i110/n448                              |                1 |
+|i110/n447                              |                1 |
+|i110/n446                              |                1 |
+|u_threshold_control/n175               |                1 |
+|ceg_net399                             |                1 |
+|i110/n445                              |                1 |
+|i110/n418                              |                1 |
+|i110/n406                              |                1 |
+|i110/n407                              |                1 |
+|i110/n408                              |                1 |
+|i110/n409                              |                1 |
+|i110/n410                              |                1 |
+|i110/n371                              |                1 |
+|i110/n412                              |                1 |
+|i110/n413                              |                1 |
+|i110/n414                              |                1 |
+|i110/n415                              |                1 |
+|i110/n416                              |                1 |
+|i110/n417                              |                1 |
+|i110/n405                              |                1 |
+|i110/n419                              |                1 |
+|i110/n420                              |                1 |
+|i110/n421                              |                1 |
+|i110/n422                              |                1 |
+|i110/n423                              |                1 |
+|i110/n424                              |                1 |
+|i110/n425                              |                1 |
+|i110/n426                              |                1 |
+|i110/n427                              |                1 |
+|i110/n428                              |                1 |
+|i110/n429                              |                1 |
+|i110/n494                              |                1 |
+|i110/n484                              |                1 |
+|i110/n485                              |                1 |
+|i110/n486                              |                1 |
+|i110/n487                              |                1 |
+|i110/n488                              |                1 |
+|i110/n489                              |                1 |
+|i110/n490                              |                1 |
+|i110/n491                              |                1 |
+|i110/n492                              |                1 |
+|i110/n493                              |                1 |
+|i110/n483                              |                1 |
+|i110/n495                              |                1 |
+|i110/n496                              |                1 |
+|i110/n497                              |                1 |
+|i110/n498                              |                1 |
+|i110/n499                              |                1 |
+|i110/n500                              |                1 |
+|i110/n501                              |                1 |
+|i110/n502                              |                1 |
+|i110/n503                              |                1 |
+|i110/n504                              |                1 |
+|i110/n473                              |                1 |
+|i110/n465                              |                1 |
+|i110/n466                              |                1 |
+|i110/n463                              |                1 |
+|i110/n462                              |                1 |
+|i110/n467                              |                1 |
+|i110/n468                              |                1 |
+|i110/n469                              |                1 |
+|i110/n470                              |                1 |
+|i110/n471                              |                1 |
+|i110/n472                              |                1 |
+|i110/n505                              |                1 |
+|i110/n474                              |                1 |
+|i110/n475                              |                1 |
+|i110/n476                              |                1 |
+|i110/n477                              |                1 |
+|i110/n478                              |                1 |
+|i110/n479                              |                1 |
+|i110/n480                              |                1 |
+|i110/n481                              |                1 |
+|i110/n482                              |                1 |
+|i110/n369                              |                1 |
+|i110/n455                              |                1 |
+|i110/n360                              |                1 |
+|i110/n361                              |                1 |
+|i110/n362                              |                1 |
+|i110/n363                              |                1 |
+|i110/n364                              |                1 |
+|i110/n365                              |                1 |
+|i110/n366                              |                1 |
+|i110/n367                              |                1 |
+|i110/n368                              |                1 |
+|ceg_net251                             |                1 |
+|i110/n370                              |                1 |
+|i110/n464                              |                1 |
+|i110/n372                              |                1 |
+|i110/n454                              |                1 |
+|i110/n373                              |                1 |
+|i110/n453                              |                1 |
+|i110/n374                              |                1 |
+|i110/n375                              |                1 |
+|i110/n376                              |                1 |
+|i110/n516                              |                1 |
+|i110/n506                              |                1 |
+|i110/n507                              |                1 |
+|i110/n508                              |                1 |
+|i110/n509                              |                1 |
+|i110/n510                              |                1 |
+|i110/n511                              |                1 |
+|i110/n512                              |                1 |
+|i110/n513                              |                1 |
+|i110/n514                              |                1 |
+|i110/n515                              |                1 |
+|i110/n377                              |                1 |
+|i110/n461                              |                1 |
+|i110/n460                              |                1 |
+|i110/n459                              |                1 |
+|i110/n458                              |                1 |
+|ceg_net2                               |                1 |
+|i110/n457                              |                1 |
+|u_edge_preview_2x2_or/n469             |                1 |
+|u_edge_preview_2x2_or/n468             |                1 |
+|i110/n456                              |                1 |
+|i110/n237                              |                1 |
+|i110/n225                              |                1 |
+|i110/n226                              |                1 |
+|i110/n227                              |                1 |
+|i110/n228                              |                1 |
+|i110/n229                              |                1 |
+|i110/n230                              |                1 |
+|i110/n231                              |                1 |
+|i110/n232                              |                1 |
+|i110/n233                              |                1 |
+|i110/n234                              |                1 |
+|i110/n235                              |                1 |
+|i110/n236                              |                1 |
+|i110/n224                              |                1 |
+|i110/n238                              |                1 |
+|i110/n239                              |                1 |
+|i110/n240                              |                1 |
+|i110/n241                              |                1 |
+|i110/n242                              |                1 |
+|i110/n243                              |                1 |
+|i110/n244                              |                1 |
+|i110/n245                              |                1 |
+|i110/n246                              |                1 |
+|i110/n247                              |                1 |
+|i110/n248                              |                1 |
+|i110/n212                              |                1 |
+|i110/n201                              |                1 |
+|i110/n202                              |                1 |
+|i110/n203                              |                1 |
+|i110/n204                              |                1 |
+|i110/n205                              |                1 |
+|i110/n206                              |                1 |
+|i110/n207                              |                1 |
+|i110/n208                              |                1 |
+|i110/n209                              |                1 |
+|i110/n210                              |                1 |
+|i110/n211                              |                1 |
+|i110/n249                              |                1 |
+|i110/n213                              |                1 |
+|i110/n214                              |                1 |
+|i110/n215                              |                1 |
+|i110/n216                              |                1 |
+|i110/n217                              |                1 |
+|i110/n218                              |                1 |
+|i110/n219                              |                1 |
+|i110/n220                              |                1 |
+|i110/n221                              |                1 |
+|i110/n222                              |                1 |
+|i110/n223                              |                1 |
+|u_gray_preview_2x2_mean/n571           |                1 |
+|i110/n274                              |                1 |
+|ceg_net149                             |                1 |
+|u_edge_full_frame/n862                 |                1 |
+|u_edge_full_frame/n897                 |                1 |
+|u_edge_full_frame/n914                 |                1 |
+|u_edge_full_frame/n896                 |                1 |
+|ceg_net159                             |                1 |
+|u_camera/u_init_controller/n1661       |                1 |
+|u_camera/u_init_controller/n1664       |                1 |
+|u_camera/u_init_controller/n1673       |                1 |
+|ceg_net20                              |                1 |
+|ceg_net184                             |                1 |
+|i110/n273                              |                1 |
+|ceg_net245                             |                1 |
+|ceg_net382                             |                1 |
+|ceg_net380                             |                1 |
+|ceg_net378                             |                1 |
+|ceg_net376                             |                1 |
+|ceg_net374                             |                1 |
+|ceg_net372                             |                1 |
+|ceg_net370                             |                1 |
+|ceg_net360                             |                1 |
+|ceg_net358                             |                1 |
+|ceg_net357                             |                1 |
+|i110/n261                              |                1 |
+|i110/n250                              |                1 |
+|i110/n251                              |                1 |
+|i110/n252                              |                1 |
+|i110/n253                              |                1 |
+|i110/n254                              |                1 |
+|i110/n255                              |                1 |
+|i110/n256                              |                1 |
+|i110/n257                              |                1 |
+|i110/n258                              |                1 |
+|i110/n259                              |                1 |
+|i110/n260                              |                1 |
+|i110/n200                              |                1 |
+|i110/n262                              |                1 |
+|i110/n263                              |                1 |
+|i110/n264                              |                1 |
+|i110/n265                              |                1 |
+|i110/n266                              |                1 |
+|i110/n267                              |                1 |
+|i110/n268                              |                1 |
+|i110/n269                              |                1 |
+|i110/n270                              |                1 |
+|i110/n271                              |                1 |
+|i110/n272                              |                1 |
+|i110/n312                              |                1 |
+|i110/n300                              |                1 |
+|i110/n301                              |                1 |
+|i110/n302                              |                1 |
+|i110/n303                              |                1 |
+|i110/n304                              |                1 |
+|i110/n305                              |                1 |
+|i110/n306                              |                1 |
+|i110/n307                              |                1 |
+|i110/n308                              |                1 |
+|i110/n309                              |                1 |
+|i110/n310                              |                1 |
+|i110/n311                              |                1 |
+|i110/n299                              |                1 |
+|i110/n313                              |                1 |
+|i110/n314                              |                1 |
+|i110/n315                              |                1 |
+|i110/n316                              |                1 |
+|i110/n317                              |                1 |
+|i110/n318                              |                1 |
+|i110/n319                              |                1 |
+|i110/n320                              |                1 |
+|i110/n321                              |                1 |
+|i110/n322                              |                1 |
+|i110/n323                              |                1 |
+|i110/n287                              |                1 |
+|i110/n276                              |                1 |
+|i110/n277                              |                1 |
+|i110/n278                              |                1 |
+|i110/n279                              |                1 |
+|i110/n280                              |                1 |
+|i110/n281                              |                1 |
+|i110/n282                              |                1 |
+|i110/n283                              |                1 |
+|i110/n284                              |                1 |
+|i110/n285                              |                1 |
+|i110/n286                              |                1 |
+|i110/n324                              |                1 |
+|i110/n288                              |                1 |
+|i110/n289                              |                1 |
+|i110/n290                              |                1 |
+|i110/n291                              |                1 |
+|i110/n292                              |                1 |
+|i110/n293                              |                1 |
+|i110/n294                              |                1 |
+|i110/n295                              |                1 |
+|i110/n296                              |                1 |
+|i110/n297                              |                1 |
+|i110/n298                              |                1 |
+|ceg_net235                             |                1 |
+|i110/n349                              |                1 |
+|i110/n350                              |                1 |
+|i110/n351                              |                1 |
+|i110/n352                              |                1 |
+|i110/n353                              |                1 |
+|i110/n354                              |                1 |
+|i110/n355                              |                1 |
+|i110/n356                              |                1 |
+|i110/n357                              |                1 |
+|i110/n358                              |                1 |
+|i110/n359                              |                1 |
+|ceg_net237                             |                1 |
+|i110/n348                              |                1 |
+|ceg_net130                             |                1 |
+|u_camera/u_power_seq/n55               |                1 |
+|u_camera/u_power_seq/n57               |                1 |
+|ceg_net127                             |                1 |
+|ceg_net120                             |                1 |
+|~u_camera/u_dvp_capture/n478           |                1 |
+|ceg_net116                             |                1 |
+|ceg_net113                             |                1 |
+|i110/n197                              |                1 |
+|i110/n198                              |                1 |
+|i110/n199                              |                1 |
+|i110/n336                              |                1 |
+|i110/n325                              |                1 |
+|i110/n326                              |                1 |
+|i110/n327                              |                1 |
+|i110/n328                              |                1 |
+|i110/n329                              |                1 |
+|i110/n330                              |                1 |
+|i110/n331                              |                1 |
+|i110/n332                              |                1 |
+|i110/n333                              |                1 |
+|i110/n334                              |                1 |
+|i110/n335                              |                1 |
+|i110/n275                              |                1 |
+|i110/n337                              |                1 |
+|i110/n338                              |                1 |
+|i110/n339                              |                1 |
+|i110/n340                              |                1 |
+|i110/n341                              |                1 |
+|i110/n342                              |                1 |
+|i110/n343                              |                1 |
+|i110/n344                              |                1 |
+|i110/n345                              |                1 |
+|i110/n346                              |                1 |
+|i110/n347                              |                1 |
++---------------------------------------+------------------+
+
+### ### EFX_FF CE enables (end) ### ### ###
+
+### ### EFX_FF SR set/reset (begin) ### ### ###
+
+Total number of set/reset signals: 7
+Total number of FFs with set/reset signals: 2775
++------------------+------------------+
+|SR Signal         |Number of FF loads|
++------------------+------------------+
+|camera_pclk_rst_n |             1495 |
+|pixel_reset_n     |             1020 |
+|camera_sys_rst_n  |              176 |
+|sys_pll_lock      |               69 |
+|display_pll_lock  |                9 |
+|camera_plls_locked|                3 |
+|u_camera/n121     |                3 |
++------------------+------------------+
+
+### ### EFX_FF SR set/reset (end) ### ### ###
+
+### ### Sequential Elements/Signals Trimming Report (begin) ### ### ### 
+'u_framebuffer/mem_wdata[18]' (rtl\split_triple_framebuffer.sv:66) (optimized to 0)
+'u_framebuffer/mem_wdata[19]' (rtl\split_triple_framebuffer.sv:66) (optimized to 0)
+'u_gray_preview_2x2_mean/x_d[9]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'u_gray_preview_2x2_mean/x_d[10]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'u_gray_preview_2x2_mean/x_d[11]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'u_gray_preview_2x2_mean/y_d[8]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'u_gray_preview_2x2_mean/y_d[9]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'u_gray_preview_2x2_mean/y_d[10]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'u_gray_preview_2x2_mean/y_d[11]' (rtl\gray_preview_2x2_mean.sv:34) (optimized to 0)
+'gray_preview_x[9]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'gray_preview_x[10]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'gray_preview_x[11]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'gray_preview_y[8]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'gray_preview_y[9]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'gray_preview_y[10]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'gray_preview_y[11]' (rtl\phase_camera_display_official_waveshare.sv:104) (optimized to 0)
+'u_gray_preview_2x2_mean/bottom_sum_d[9]' (rtl\gray_preview_2x2_mean.sv:33) (optimized to 0)
+'edge_preview_x[9]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'edge_preview_x[10]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'edge_preview_x[11]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'edge_preview_y[8]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'edge_preview_y[9]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'edge_preview_y[10]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'edge_preview_y[11]' (rtl\phase_camera_display_official_waveshare.sv:97) (optimized to 0)
+'u_rgb565_to_gray8/g_product_s1[0]' (rtl\rgb565_to_gray8.sv:38) (optimized to 0)
+'u_rgb565_to_gray8/b_product_s1[15]' (rtl\rgb565_to_gray8.sv:38) (optimized to 0)
+'requested_threshold_sys[1]' (rtl\phase_camera_display_official_waveshare.sv:85) (optimized to 0)
+'requested_threshold_sys[0]' (rtl\phase_camera_display_official_waveshare.sv:85) (optimized to 0)
+'requested_threshold_sys[2]' (rtl\phase_camera_display_official_waveshare.sv:85) (optimized to 0)
+'u_preview_pair_aligner/x_d[9]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'u_preview_pair_aligner/x_d[10]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'u_preview_pair_aligner/x_d[11]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'u_preview_pair_aligner/y_d[8]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'u_preview_pair_aligner/y_d[9]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'u_preview_pair_aligner/y_d[10]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'u_preview_pair_aligner/y_d[11]' (rtl\preview_pair_aligner.sv:42) (optimized to 0)
+'paired_x[9]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'paired_x[10]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'paired_x[11]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'paired_y[8]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'paired_y[9]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'paired_y[10]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'paired_y[11]' (rtl\phase_camera_display_official_waveshare.sv:109) (optimized to 0)
+'u_camera/txn_reg_addr[15]' (rtl\camera_frontend.sv:45) (optimized to 0)
+'u_camera/u_sccb_master/command_addr[15]' (rtl\sccb_master.sv:42) (optimized to 0)
+'buffer_error_pclk' (rtl\phase_camera_display_official_waveshare.sv:115) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[0]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[0]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[1]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[2]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[3]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[4]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[5]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[6]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[7]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[8]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[9]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[10]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[11]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[12]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[13]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[14]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/max_line_pixels[15]' (rtl\camera_frame_monitor.sv:31) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[1]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[2]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[3]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[4]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[5]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[6]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[7]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[8]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[9]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[10]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[11]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[12]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[13]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[14]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'u_camera/u_frame_monitor/min_line_pixels[15]' (rtl\camera_frame_monitor.sv:30) (unreachable)
+'pair_fifo_max_level[0]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[1]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[2]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[3]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[4]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[5]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[6]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[7]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[8]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[9]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'pair_fifo_max_level[10]' (rtl\phase_camera_display_official_waveshare.sv:112) (unreachable)
+'edge_fifo_max_level[0]' (rtl\phase_camera_display_official_waveshare.sv:113) (unreachable)
+'edge_fifo_max_level[1]' (rtl\phase_camera_display_official_waveshare.sv:113) (unreachable)
+'edge_fifo_max_level[2]' (rtl\phase_camera_display_official_waveshare.sv:113) (unreachable)
+'edge_fifo_max_level[3]' (rtl\phase_camera_display_official_waveshare.sv:113) (unreachable)
+'edge_fifo_max_level[4]' (rtl\phase_camera_display_official_waveshare.sv:113) (unreachable)
+'u_frame_count_cdc/toggle_sync[0]' (rtl\snapshot_cdc.sv:14) (unreachable)
+'u_frame_count_cdc/toggle_seen' (rtl\snapshot_cdc.sv:17) (unreachable)
+'u_frame_count_cdc/toggle_sync[1]' (rtl\snapshot_cdc.sv:14) (unreachable)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[3]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[2]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[1]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[0]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[6]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[5]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame1/g_native_blocks.rd_block_d[4]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[3]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[2]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[1]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[0]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[6]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[5]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+'u_framebuffer/u_frame2/g_native_blocks.rd_block_d[4]' (rtl\frame_ram20.sv:30) (merged to equivalence)
+### ### Sequential Elements Trimming Report (end) ### ### ### 
+
+### ### Module Resource Usage Distribution Estimates (begin) ### ###
+
+**Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module                                                              FFs      SRLs       ADDs       LUTs    COMB4s      RAMs DSP/MULTs
+------------------------------------------------------------        ---      ----       ----       ----      ----      ---- ---------
+phase_camera_display_official_waveshare:phase_camera_disp...  3422(233)      0(0)    1139(0)   6858(13)      0(0)    229(0)      0(0)
+ +u_button_sync:button_sync_debounce                             60(60)      0(0)     46(46)     74(74)      0(0)      0(0)      0(0)
+ +u_threshold_control:threshold_control                            9(9)      0(0)     14(14)     31(31)      0(0)      0(0)      0(0)
+ +u_threshold_to_pclk:threshold_bus_cdc                          27(27)      0(0)       0(0)       1(1)      0(0)      0(0)      0(0)
+ +u_camera:camera_frontend                                       357(0)      0(0)     204(0)     923(1)      0(0)      0(0)      0(0)
+  +u_sys_reset_sync:reset_sync                                     3(3)      0(0)       0(0)       0(0)      0(0)      0(0)      0(0)
+  +u_power_seq:camera_power_seq(CLK_HZ=32'b01011011100011...     24(24)      0(0)     21(21)     14(14)      0(0)      0(0)      0(0)
+  +u_init_rom:I2C_OV5640_640480_Config                             0(0)      0(0)       0(0)    269(70)      0(0)      0(0)      0(0)
+   +u_official_table:I2C_OV5640_RGB565_Config_Official             0(0)      0(0)       0(0)   199(199)      0(0)      0(0)      0(0)
+  +u_init_controller:ov5640_init_controller(CLK_HZ=32'b01...     87(87)      0(0)       0(0)   371(371)      0(0)      0(0)      0(0)
+  +u_sccb_master:sccb_master(CLK_HZ=32'b01011011100011011...     65(65)      0(0)       7(7)   135(135)      0(0)      0(0)      0(0)
+  +u_pclk_reset_sync:reset_sync                                    3(3)      0(0)       0(0)       0(0)      0(0)      0(0)      0(0)
+  +u_dvp_capture:dvp_rgb565_capture(ACTIVE_WIDTH=32'b0101...     73(73)      0(0)     17(17)     37(37)      0(0)      0(0)      0(0)
+  +u_frame_monitor:camera_frame_monitor(ACTIVE_WIDTH=32'b...   102(102)      0(0)   159(159)     96(96)      0(0)      0(0)      0(0)
+ +u_rgb565_to_gray8:rgb565_to_gray8                              97(97)      0(0)   132(132)     10(10)      0(0)      0(0)      0(0)
+ +u_gray_window_3x3:gray_window_3x3                            241(206)      0(0)     57(21)     96(61)      0(0)      2(0)      0(0)
+  +u_line_y_minus_1:line_delay_ram8                              15(15)      0(0)     18(18)     15(15)      0(0)      1(1)      0(0)
+  +u_line_y_minus_2:line_delay_ram8(DELAY_PIXELS=639)            20(20)      0(0)     18(18)     20(20)      0(0)      1(1)      0(0)
+ +u_sobel_threshold:sobel_threshold                              73(73)      0(0)   117(117)     43(43)      0(0)      0(0)      0(0)
+ +u_edge_full_frame:edge_full_frame_stream                     386(386)      0(0)       6(6)   366(366)      0(0)      0(0)      0(0)
+ +u_edge_preview_2x2_or:edge_preview_2x2_or                    363(363)      0(0)     17(17)   648(648)      0(0)      0(0)      0(0)
+ +u_gray_preview_2x2_mean:gray_preview_2x2_mean                  86(86)      0(0)     36(36)     63(63)      0(0)      1(1)      0(0)
+ +u_preview_pair_aligner:preview_pair_aligner                  117(117)      0(0)     60(60)   117(117)      0(0)      1(1)      0(0)
+ +u_frame_event_counters:frame_event_counters                  387(387)      0(0)   124(124)     47(47)      0(0)      0(0)      0(0)
+ +u_pixel_reset:reset_release_sync                                 3(3)      0(0)       0(0)       0(0)      0(0)      0(0)      0(0)
+ +u_fast_reset:reset_release_sync                                  3(3)      0(0)       0(0)       0(0)      0(0)      0(0)      0(0)
+ +u_feedback_reset:reset_release_sync                              3(3)      0(0)       0(0)       0(0)      0(0)      0(0)      0(0)
+ +u_timing:video_timing_gen(H_ACTIVE=640,H_FP=16,H_SYNC=9...     29(29)      0(0)     22(22)     30(30)      0(0)      0(0)      0(0)
+ +u_framebuffer:split_triple_framebuffer                       229(222)      0(0)   204(204)   517(163)      0(0)    225(0)      0(0)
+  +u_frame0:frame_ram20(DEPTH=38400)                               7(7)      0(0)       0(0)   188(188)      0(0)    75(75)      0(0)
+  +u_frame1:frame_ram20(DEPTH=38400)                               0(0)      0(0)       0(0)     83(83)      0(0)    75(75)      0(0)
+  +u_frame2:frame_ram20(DEPTH=38400)                               0(0)      0(0)       0(0)     83(83)      0(0)    75(75)      0(0)
+ +u_frame_diag_cdc:snapshot_cdc(WIDTH=136)                       28(28)      0(0)       0(0)       1(1)      0(0)      0(0)      0(0)
+ +u_stability_count_cdc:snapshot_cdc(WIDTH=192)                580(580)      0(0)       0(0)       1(1)      0(0)      0(0)      0(0)
+ +u_frame_counter_overlay:frame_counter_overlay                    0(0)      0(0)     13(13)       0(0)      0(0)      0(0)      0(0)
+ +u_tmds_blue:tmds_encoder                                       44(44)      0(0)     29(29)   485(485)      0(0)      0(0)      0(0)
+ +u_tmds_green:tmds_encoder                                      35(35)      0(0)     29(29)   444(444)      0(0)      0(0)      0(0)
+ +u_tmds_red:tmds_encoder                                        32(32)      0(0)     29(29) 2948(2948)      0(0)      0(0)      0(0)
+
+### ### Module Resource Usage Distribution Estimates (end) ### ###
+
+
+### ### DSP Usage Report (begin) ### ### ### 
+
+ No DSP in design
+
+### ### Clock Load Distribution Report (begin) ### ###
+
++--------------------+----------+----------+------------+----------------+
+|Clock               |Flip-Flops|Shift-Regs|Memory Ports|Multipliers/DSPs|
++--------------------+----------+----------+------------+----------------+
+|clk_pixel           |     1030 |        0 |        225 |              0 |
+|cmos_pclk           |     2138 |        0 |        233 |              0 |
+|clk_sys             |      248 |        0 |          0 |              0 |
+|clk_pixel_5x        |        3 |        0 |          0 |              0 |
+|display_feedback_24m|        3 |        0 |          0 |              0 |
++--------------------+----------+----------+------------+----------------+
+
+### ### Clock Load Distribution Report (end) ### ###
+
+### ### Memory Mapping Report (begin) ### ### ###
+
+### ### Memory Mapping Report (end) ### ### ###
+
+### ### Resource Summary (begin) ### ### ### 
+
+INPUT  PORTS    : 	25
+OUTPUT PORTS    : 	65
+
+EFX_ADD                 : 	1139
+EFX_LUT4                : 	6858
+   1-2  Inputs          : 	1317
+   3    Inputs          : 	1351
+   4    Inputs          : 	4190
+EFX_FF                  : 	3422
+EFX_RAM10               : 	229
+### ### Resource Summary (end) ### ### ###
+
+Plain synthesis (without verilog dump and post-map checks) time : 25s
+Elapsed synthesis time : 27s

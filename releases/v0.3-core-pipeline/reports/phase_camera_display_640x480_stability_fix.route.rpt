@@ -1,0 +1,32 @@
+
+Elitestek FPGA Placement and Routing.
+Version: 2026.1.132 
+Date: Fri Oct  2 21:21:14 2026
+
+Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+ 
+Family: Titanium 
+Device: Ti60F225
+Top-level Entity Name: phase_camera_display_640x480_stability_fix
+Elapsed time for routing: 0 hours 0 minutes 11 seconds
+
+
+---------- GBUFCE Assignments (begin) ----------
+
+
++----------------------+----------+----------+
+|      Clock Net       | GBUFCE_X | GBUFCE_Y |
++----------------------+----------+----------+
+|       clk_27m        |   218    |   163    |
+|      clk_pixel       |    1     |   159    |
+|     clk_pixel_5x     |    1     |   163    |
+|       clk_sys        |   109    |    1     |
+|      cmos_pclk       |   111    |   322    |
+| display_feedback_24m |    1     |   162    |
++----------------------+----------+----------+
+
+
+----------- GBUFCE Assignments (end) ----------
+
+
+Elapsed time for Latest PnR Run: 0 hours 0 minutes 38 seconds

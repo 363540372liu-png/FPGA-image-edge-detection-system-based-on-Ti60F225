@@ -1,0 +1,124 @@
+
+Efinity Interface Designer Timing Report
+Version: 2026.1.132
+Date: 2026-10-02 21:20
+
+Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
+
+Device: Ti60F225
+Project: phase_camera_display_640x480_stability_fix
+Timing Model: C4 (final)
+
+---------- 1. PLL Timing Report (begin) ----------
+
++--------------+----------+-----------------+----------------------------------+---------+---------------------+---------------------------------+---------------------------------+
+| PLL Instance | Resource | Reference Clock |     Core Clock Reference Pin     | FB Mode |  Core Feedback Pin  | PLL Compensation Delay Max (ns) | PLL Compensation Delay Min (ns) |
++--------------+----------+-----------------+----------------------------------+---------+---------------------+---------------------------------+---------------------------------+
+|   sys_pll    | PLL_BL0  |       core      | display_feedback_24m~CLKOUT~18~1 |   core  | clk_sys~CLKOUT~19~1 |              1.885              |              1.220              |
+| display_pll  | PLL_TL0  |     external    |                                  |  local  |                     |              0.000              |              0.000              |
+|   lvds_pll   | PLL_TR0  |       core      |      clk_sys~CLKOUT~200~322      |  local  |                     |              0.000              |              0.000              |
++--------------+----------+-----------------+----------------------------------+---------+---------------------+---------------------------------+---------------------------------+
+
++----------------------+-------------+----------------------------+-----------------------+----------+
+|        Clock         | Period (ns) | Enable Dynamic Phase Shift | Phase Shift (degrees) | Inverted |
++----------------------+-------------+----------------------------+-----------------------+----------+
+|       clk_sys        |    10.417   |           false            |         0.000         |  false   |
+| display_feedback_24m |    41.667   |           false            |         0.000         |  false   |
+|      clk_pixel       |    39.683   |           false            |         0.000         |  false   |
+|     clk_pixel_5x     |    7.937    |           false            |         54.000        |  false   |
+|     clk_lvds_1x      |    20.833   |           false            |         0.000         |  false   |
+|       clk_27m        |    41.667   |           false            |         0.000         |  false   |
++----------------------+-------------+----------------------------+-----------------------+----------+
+
+---------- PLL Timing Report (end) ----------
+
+---------- 2. GPIO Timing Report (begin) ----------
+
+Clkout GPIO Configuration:
+===========================
+
++---------------+-----------+--------------+----------+----------+------------------------+
+| Instance Name | Clock Pin |  Parameter   | Max (ns) | Min (ns) |   Reference Pin Name   |
++---------------+-----------+--------------+----------+----------+------------------------+
+|   cmos_xclk   |  clk_27m  | GPIO_CLK_OUT |  3.740   |  2.493   | clk_27m~CLKOUT~209~322 |
++---------------+-----------+--------------+----------+----------+------------------------+
+
+Non-registered GPIO Configuration:
+===================================
+
++---------------+----------------+-----------+----------+----------+
+| Instance Name |    Pin Name    | Parameter | Max (ns) | Min (ns) |
++---------------+----------------+-----------+----------+----------+
+|    clk_24m    |    clk_24m     |  GPIO_IN  |  1.907   |  1.271   |
+|   cmos_ctl1   | cmos_ctl1_pwdn |  GPIO_OUT |  5.740   |  2.493   |
+|   cmos_sclk   |   cmos_sclk    |  GPIO_OUT |  5.740   |  2.493   |
+|    led_o[0]   |    led_o[0]    |  GPIO_OUT |  5.740   |  2.493   |
+|    led_o[1]   |    led_o[1]    |  GPIO_OUT |  5.740   |  2.493   |
+|    led_o[2]   |    led_o[2]    |  GPIO_OUT |  5.740   |  2.493   |
+|    led_o[3]   |    led_o[3]    |  GPIO_OUT |  5.740   |  2.493   |
+|    led_o[4]   |    led_o[4]    |  GPIO_OUT |  5.740   |  2.493   |
+|    led_o[5]   |    led_o[5]    |  GPIO_OUT |  5.740   |  2.493   |
+|   cmos_ctl2   |  cmos_ctl2_in  |  GPIO_IN  |  1.907   |  1.271   |
+|   cmos_ctl2   | cmos_ctl2_out  |  GPIO_OUT |  5.740   |  2.493   |
+|   cmos_ctl2   |  cmos_ctl2_oe  |  GPIO_OUT |  3.984   |  2.656   |
+|   cmos_sdat   |  cmos_sdat_in  |  GPIO_IN  |  1.907   |  1.271   |
+|   cmos_sdat   | cmos_sdat_out  |  GPIO_OUT |  5.740   |  2.493   |
+|   cmos_sdat   |  cmos_sdat_oe  |  GPIO_OUT |  3.984   |  2.656   |
++---------------+----------------+-----------+----------+----------+
+
+Registered GPIO Configuration:
+===============================
+
++---------------+-----------+----------------+----------------+---------------+---------------+-----------------------+-----------------------+
+| Instance Name | Clock Pin | Max Setup (ns) | Min Setup (ns) | Max Hold (ns) | Min Hold (ns) | Max Clock To Out (ns) | Min Clock To Out (ns) |
++---------------+-----------+----------------+----------------+---------------+---------------+-----------------------+-----------------------+
+|  cmos_data[0] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[1] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[2] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[3] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[4] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[5] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[6] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|  cmos_data[7] | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|   cmos_href   | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
+|   cmos_vsync  | cmos_pclk |     1.431      |     0.954      |     -0.363    |     -0.242    |                       |                       |
++---------------+-----------+----------------+----------------+---------------+---------------+-----------------------+-----------------------+
+
+---------- GPIO Timing Report (end) ----------
+
+---------- 3.1 HSIO GPIO Timing Report (begin) ----------
+
+Non-registered HSIO GPIO Configuration:
+========================================
+
++---------------+---------------+-------------+----------+----------+
+| Instance Name |    Pin Name   |  Parameter  | Max (ns) | Min (ns) |
++---------------+---------------+-------------+----------+----------+
+|   cmos_pclk   |   cmos_pclk   | GPIO_CLK_IN |  1.773   |  1.182   |
+|  key_data[0]  |  key_data[0]  |   GPIO_IN   |  0.828   |  0.552   |
+|  key_data[1]  |  key_data[1]  |   GPIO_IN   |  0.828   |  0.552   |
+|   cmos_ctl3   |  cmos_ctl3_in |   GPIO_IN   |  0.828   |  0.552   |
+|   cmos_ctl3   | cmos_ctl3_out |   GPIO_OUT  |  2.205   |  1.470   |
+|   cmos_ctl3   |  cmos_ctl3_oe |   GPIO_OUT  |  1.953   |  1.302   |
++---------------+---------------+-------------+----------+----------+
+
+---------- HSIO GPIO Timing Report (end) ----------
+
+---------- 3.2.1 LVDS Tx Timing Report (begin) ----------
+
+---------- LVDS Tx Timing Report (end) ----------
+
+---------- 4. Clock Network Delay Report (begin) ----------
+
++----------------------+----------+----------+
+|      Clock Pin       | Max (ns) | Min (ns) |
++----------------------+----------+----------+
+|       clk_27m        |  1.775   |  1.148   |
+|      clk_pixel       |  1.820   |  1.178   |
+|     clk_pixel_5x     |  1.805   |  1.168   |
+|       clk_sys        |  1.885   |  1.220   |
+|      cmos_pclk       |  1.802   |  1.166   |
+| display_feedback_24m |  1.827   |  1.183   |
++----------------------+----------+----------+
+
+---------- Clock Network Delay Report (end) ----------

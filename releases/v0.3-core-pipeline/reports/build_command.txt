@@ -1,0 +1,8 @@
+PowerShell command:
+  & .\build.ps1
+
+Efinity command executed by build.ps1:
+  E:\efinity\2026.1\bin\efx_run.bat phase_camera_display_640x480_stability_fix.xml --prj --flow compile
+
+Result: synthesis PASS, interface PASS, place-and-route PASS, bitstream generation PASS.
+Bitstream SHA-256: FE4D0B0FC98C6167C1D798F4222D78E300689B10A8867A6C9FE7449D720F82AA

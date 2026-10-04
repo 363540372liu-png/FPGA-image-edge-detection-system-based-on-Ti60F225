@@ -27,11 +27,14 @@ OV5640 Camera -> RGB -> Grayscale -> 3x3 Window / Line Buffer
 | OV5640 camera input | PASS |
 | Display output | PASS |
 | Camera-to-display passthrough | PASS |
-| RGB to grayscale | PASS (v0.2 offline) |
-| 3x3 line buffer | PASS (v0.2 offline) |
-| Sobel edge detection | PASS (v0.2 offline) |
-| Threshold | PASS (strict `abs(Gx)+abs(Gy)>128`) |
-| Complete edge detection pipeline | PASS offline; physical test pending |
+| RGB to grayscale | PASS |
+| 3x3 line buffer | PASS |
+| Sobel edge detection | PASS |
+| Thresholded edge output | PASS |
+| Core real-time edge pipeline | PASS |
+| Quality optimization | Planned |
+| Python golden-model comparison | PASS offline; quantitative extension planned |
+| Final competition demonstration | In Progress |
 
 ## Current Baseline
 
@@ -43,12 +46,14 @@ The hardware PASS is based on the existing user acceptance record. The release p
 
 ```text
 OV5640 DVP
-  -> RGB565 capture and frame checks
-  -> 4x3 subsampling and dual-bank frame buffer
-  -> diagnostic overlay / RGB565 to RGB888
-  -> TMDS encoding
-  -> Efinix LVDS TX serializer
-  -> HDMI-compatible display
+  -> camera_frontend / RGB565 capture and frame checks
+  -> rgb565_to_gray8
+  -> two line buffers / gray_window_3x3
+  -> sobel_threshold: signed Gx/Gy -> abs(Gx)+abs(Gy) -> threshold
+  -> full-frame edge scheduler -> 2x2 OR binary preview
+  -> grayscale mean + preview aligner
+  -> split triple framebuffer / frame counters / overlays
+  -> TMDS encoding -> HDMI-compatible display
 ```
 
 ## Repository Structure
@@ -79,14 +84,13 @@ The baseline RTL passed the recorded simulation regressions and the Efinity 2026
 
 ## Latest Milestone
 
-`v0.2-basic-sobel-edge-detection` adds the independently verified 640x480
-camera-to-display Sobel milestone. It preserves the v0.1 release and uses a
-two-line 3x3 window, signed Sobel arithmetic, strict threshold 128, full-frame
-border-aware scheduling, and 2x2 OR reduction to the accepted 320x240 display
-buffer. See [the v0.2 acceptance report](releases/v0.2-basic-sobel-edge-detection/offline-acceptance-report.md)
-for the exact verification scope and known limits.
+`v0.3-core-pipeline` preserves the user-accepted 640x480 core pipeline,
+including the split grayscale/binary-edge view, debounced threshold buttons,
+coherent counters, and triple-buffer frame ownership fix. See [the core pipeline
+document](docs/core-edge-detection-pipeline.md) and [the v0.3 acceptance
+record](releases/v0.3-core-pipeline/acceptance-record.md).
 
-The delivered bitstream SHA-256 is
-`6952E2A1DE00E472C017B02AFB04F0B06C498531CBA2D065C5060783B9271DE9`.
-Offline Efinity implementation is complete; physical JTAG download and
-camera/display confirmation are still user actions.
+The delivered bitstream is `ti60f225_edge_detection_core.bit` with SHA-256
+`FE4D0B0FC98C6167C1D798F4222D78E300689B10A8867A6C9FE7449D720F82AA`.
+The acceptance record preserves the boundary between user-observed hardware
+behavior and offline-only measurements.

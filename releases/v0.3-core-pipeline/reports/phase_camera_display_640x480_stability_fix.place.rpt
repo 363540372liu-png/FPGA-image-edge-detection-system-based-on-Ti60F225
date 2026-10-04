@@ -1,0 +1,55 @@
+
+Elitestek FPGA Placement and Routing.
+Version: 2026.1.132 
+Date: Fri Oct  2 21:20:55 2026
+
+Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+ 
+Family: Titanium 
+Device: Ti60F225
+Top-level Entity Name: phase_camera_display_640x480_stability_fix
+
+---------- IO Interface Summary (begin) ----------
+
++------------------------+--------------+
+| Missing Interface Pins | Input/Output |
++------------------------+--------------+
+|      cmos_ctl3_in      |    Input     |
+|      cmos_ctl2_in      |    Input     |
+|      clk_lvds_1x       |    Input     |
++------------------------+--------------+
+
+----------- IO Interface Summary (end) ----------
+
+
+---------- Module Resource Usage Distribution Estimates (begin) ----------
+
+'Module Resource Usage Distribution Estimates' table printed in: outflow\phase_camera_display_640x480_stability_fix.hier_util.rpt
+
+----------- Module Resource Usage Distribution Estimates (end) ----------
+
+Elapsed time for packing: 0 hours 0 minutes 1 seconds
+---------- Resource Summary (begin) ----------
+Inputs: 22 / 1703 (1.29%)
+Outputs: 87 / 2267 (3.84%)
+Global Clocks (GBUF): 6 / 32 (18.75%)
+Regional Clocks (RBUF): 0 / 32 (0.00%)
+	RBUF: Core: 0 / 16 (0.00%)
+	RBUF: Periphery: 0 / 8 (0.00%)
+	RBUF: Multi-Region: 0 / 8 (0.00%)
+XLRs: 10350 / 60800 (17.02%)
+	XLRs needed for LUT4: 6247 / 60800 (10.27%)
+	XLRs needed for LUT4 + FF: 613 / 60800 (1.01%)
+	XLRs needed for COMB4: 0 / 60800 (0.00%)
+	XLRs needed for COMB4 + FF: 0 / 60800 (0.00%)
+	XLRs needed for Adder: 681 / 60800 (1.12%)
+	XLRs needed for Adder + FF: 458 / 60800 (0.75%)
+	XLRs needed for SRL8: 0 / 14720 (0.00%)
+	XLRs needed for SRL8 + FF: 0 / 14720 (0.00%)
+	XLRs needed for FF: 2351 / 60800 (3.87%)
+	XLRs needed for Routing: 0 / 60800 (0.00%)
+Memory Blocks: 229 / 256 (89.45%)
+DSP Blocks: 0 / 160 (0.00%)
+---------- Resource Summary (end) ----------
+
+Elapsed time for placement: 0 hours 0 minutes 12 seconds

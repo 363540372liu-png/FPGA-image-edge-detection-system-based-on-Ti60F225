@@ -1,0 +1,105 @@
+{
+  "reference": "unscaled abs(Gx)+abs(Gy), strict greater-than threshold",
+  "threshold": 128,
+  "border": "outermost row and column forced to zero",
+  "preview": "non-overlapping 2x2 logical OR",
+  "real_image_source": "E:\\codex\\fgpa\\rasberry\\fpga-edge-step1\\inputs\\real\\scene_input.png",
+  "cases": [
+    {
+      "name": "constant_8x6",
+      "width": 8,
+      "height": 6,
+      "input_pixels": 48,
+      "interior_windows": 24,
+      "edge_pixels": 0,
+      "preview_pixels": 12,
+      "preview_white_pixels": 0,
+      "max_magnitude": 0,
+      "edge_sha256": "17B0761F87B081D5CF10757CCC89F12BE355C70E2E29DF288B65B30710DCBCD1"
+    },
+    {
+      "name": "vertical_step_8x6",
+      "width": 8,
+      "height": 6,
+      "input_pixels": 48,
+      "interior_windows": 24,
+      "edge_pixels": 8,
+      "preview_pixels": 12,
+      "preview_white_pixels": 6,
+      "max_magnitude": 1020,
+      "edge_sha256": "0CBF1209966CD5D4F4F097C100F749B1C7B95377978C589D101B7457710E8E58"
+    },
+    {
+      "name": "horizontal_step_8x6",
+      "width": 8,
+      "height": 6,
+      "input_pixels": 48,
+      "interior_windows": 24,
+      "edge_pixels": 12,
+      "preview_pixels": 12,
+      "preview_white_pixels": 4,
+      "max_magnitude": 1020,
+      "edge_sha256": "BE4699A727A23DB9AE52C879C9375CFC1992724AE5461C52CAF8B78EB45015BB"
+    },
+    {
+      "name": "diagonal_8x8",
+      "width": 8,
+      "height": 8,
+      "input_pixels": 64,
+      "interior_windows": 36,
+      "edge_pixels": 20,
+      "preview_pixels": 16,
+      "preview_white_pixels": 10,
+      "max_magnitude": 1290,
+      "edge_sha256": "FFB2737377CDD40DB31863995138B801EB290F762225F9F63132B17E0FCF00B5"
+    },
+    {
+      "name": "checker_8x8",
+      "width": 8,
+      "height": 8,
+      "input_pixels": 64,
+      "interior_windows": 36,
+      "edge_pixels": 0,
+      "preview_pixels": 16,
+      "preview_white_pixels": 0,
+      "max_magnitude": 0,
+      "edge_sha256": "F5A5FD42D16A20302798EF6ED309979B43003D2320D9F0E8EA9831A92759FB4B"
+    },
+    {
+      "name": "random_18x14",
+      "width": 18,
+      "height": 14,
+      "input_pixels": 252,
+      "interior_windows": 192,
+      "edge_pixels": 179,
+      "preview_pixels": 63,
+      "preview_white_pixels": 63,
+      "max_magnitude": 1092,
+      "edge_sha256": "CA828C477E218E80BF89FB67479450BE9582DEDB080410A87465E790D3BCB6A1"
+    },
+    {
+      "name": "random_640x480",
+      "width": 640,
+      "height": 480,
+      "input_pixels": 307200,
+      "interior_windows": 304964,
+      "edge_pixels": 283314,
+      "preview_pixels": 76800,
+      "preview_white_pixels": 76778,
+      "max_magnitude": 1390,
+      "edge_sha256": "018FD166BA08902A3E1C3DAC16089B04C758BAC2045B49BE7B5BE1FD64091BD0"
+    },
+    {
+      "name": "real_scene_640x480",
+      "width": 640,
+      "height": 480,
+      "input_pixels": 307200,
+      "interior_windows": 304964,
+      "edge_pixels": 41053,
+      "preview_pixels": 76800,
+      "preview_white_pixels": 14655,
+      "max_magnitude": 994,
+      "edge_sha256": "62EA12DB6EC306365F1CC0D85AD04AB6BE37B510A8DD7286A43191D4C6F614C6"
+    }
+  ]
+}
